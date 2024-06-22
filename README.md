@@ -52,4 +52,5 @@ URL Map:
  - path('post-delete/<int:id>',For delete a Post),#only if you a SuperUser or post Publisher
  - path('comment-delete/<int:id>',For delete a comment),#only if you a SuperUser or post Publisher
 
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/edit/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-05-19%2016-08-40.png)
 
