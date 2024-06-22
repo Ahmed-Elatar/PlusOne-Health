@@ -1,6 +1,15 @@
-# PlusOne-Health
+# PlusOne-Health Task
 
-PlusOne-Health - Project Setup Guide<br/>
+
+It's a small Blog that allows you to interact with others by sharing Posts, comments 
+And Profile in which Picture, Bio ( can update anytime ), and the posts you have shared
+And Home Page where you can find the latest Post From Others Or search for a certain Post 
+
+
+
+
+
+PlusOne-Health - Project Setup Guide <br/>
 
 Pre-requisites<br/>
 
@@ -52,4 +61,10 @@ URL Map:
  - path('post-delete/<int:id>',For delete a Post),#only if you a SuperUser or post Publisher
  - path('comment-delete/<int:id>',For delete a comment),#only if you a SuperUser or post Publisher
 
-
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-00-12.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-01-15.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-01-35.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-02-16.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-07-18.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-08-51.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-09-45.png)
