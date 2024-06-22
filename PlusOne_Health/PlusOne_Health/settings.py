@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f!j=j=@5r0$%athm4yee-49a=khh#7^4)lfz5aben(dh(&##y)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'plusonehealth',
         'USER': 'postgres',
-        'PASSWORD': 'Ahmed2000-',
+        'PASSWORD': '******',
         'HOST': '127.0.0.1', 
         'PORT': '5432',
     }
