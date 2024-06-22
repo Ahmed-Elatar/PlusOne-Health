@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block user %}  
+    
+{% if user_profile.image %}
+<img 
+style="border-radius: 40%  ; width: 200px ; height: 200px; float: left; margin-right: 30px; " 
+src="{{  user_profile.image.url }}">
+{% endif %}
+
+<h2 style="color:green;font-family: serif;" >{{user.username.upper}}</h2>
+
+{% if user_profile.bio %}
+<h2 style="color:green;font-family: serif;" >
+  {{ user_profile.bio | linebreaks }}
+</h2>
+{% endif %}
+
+
+
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<h1>Add Post</h1>
+  <h2 style="margin-left: 450px;">Post Details</h2>
+  <div style="border-style: double;background-color: darkgrey;margin-left: 450px;padding: 20px;padding-bottom: 380px;padding-right: 50px; width: 300px;">
+      <form  method="post" enctype="multipart/form-data">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <br>
+        <p><input type="submit" value="Publish"></p>
+        
+          
+      </form>
+  </div>
+  
+  <style>
+    input{
+      
+      color: green;
+    }
+  </style>
+  
+{% endblock %}

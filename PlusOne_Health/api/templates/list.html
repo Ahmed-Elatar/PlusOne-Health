@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+
+{% block user %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+</style>
+  <form method="POST" class="example" >
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+
+{% endblock %}
+
+
+{% block content %}
+  <h1>Home</h1>
+  <h2 style="margin-left: 400px;margin-bottom: 5px;">Recent Posts</h2>
+  {% for post in posts %}
+    <div style="border-style: double;background-color: darkgrey;margin-left: 400px;width: 600px;text-align: center;">
+    <h2>
+      <a href="{% url 'post_detail' post.id %}">
+        {{ post.title }}
+        
+      </a>
+      
+    </h2>
+    {{ post.body|truncatewords:30|linebreaks }}
+    {% if post.image %}
+        <img style="width: 300px ;margin-top: -10px;margin-bottom: 30px;" src="{{post.image.url}}" >  
+        {% endif %}
+    <p class="date">
+      Published {{ post.publish }} by<a href="{% url 'profile' post.auth.id %}"> {{ post.auth }}</a>
+    </p>
+  </div>
+  {% endfor %}
+  <div style="margin-left: 650px;">
+    {% include "pagination.html" with page=posts %}
+  </div>  
+  {% endblock %}

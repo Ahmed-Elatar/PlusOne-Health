@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+   ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+</style>
+    
+<title>PlusOne-Health</title>
+<link href='{% static "css/chat_ii.css" %}' rel="stylesheet">
+</head>
+<body>
+
+    <ul>
+      
+      
+       
+
+        <li style="float:right"><a  href="#about">About</a></li>
+        
+        <li class="dropdown" style="float: right;  width: 100px; background-color: black; ">
+          <a href="javascript:void(0)"  class="dropbtn">User</a>
+          <div class="dropdown-content" >
+            {% if request.user.id == None %}
+            <a href="{% url 'login'  %}" >Login </a>
+            <a href="{% url 'signup'  %}">signup</a>
+            {% endif %}
+            {% if request.user.id != None %}
+            <a href="/admin/password_change/" >Change Password</a>
+            <a href="{% url 'logout'  %}">Logout</a>
+            {% endif %}
+
+
+    
+            
+    
+
+
+            
+          </div>
+        </li>
+        
+
+        {% if request.user.id != None %}  
+          <li><a class="active" href="{% url 'profile' request.user.id  %}">Profile</a></li>  
+        {% endif %}
+        
+      <li><a href="{% url 'index'  %}">Home</a></li>
+      {% if request.user.id != None %}
+      <li><a href="{% url 'add_post'  %}">Add Post</a></li>
+      {% endif %}
+        
+
+          
+
+
+    </ul>
+
+<div id="content">
+{% block content %}
+
+{% endblock %}
+</div>
+<div id="sidebar" style="float: right;"  >    
+<h2 style="color: #04AA6D;">PlusOne-Health</h2>
+{% block user %}
+
+{% endblock %}
+
+</div>
+</body>
+</html>
