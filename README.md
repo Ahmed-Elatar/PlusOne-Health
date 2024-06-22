@@ -1,6 +1,15 @@
-# PlusOne-Health
+# PlusOne-Health Task
 
-PlusOne-Health - Project Setup Guide<br/>
+
+It's a small Blog that allows you to interact with others by sharing Posts, comments 
+And Profile in which Picture, Bio ( can update anytime ), and the posts you have shared
+And Home Page where you can find the latest Post From Others Or search for a certain Post 
+
+
+
+
+
+PlusOne-Health - Project Setup Guide <br/>
 
 Pre-requisites<br/>
 
