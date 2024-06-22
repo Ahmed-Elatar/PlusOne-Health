@@ -53,3 +53,9 @@ URL Map:
  - path('comment-delete/<int:id>',For delete a comment),#only if you a SuperUser or post Publisher
 
 ![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-00-12.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-01-15.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-01-35.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-02-16.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-07-18.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-08-51.png)
+![alt text](https://github.com/Ahmed-Elatar/PlusOne-Health/blob/main/PlusOne_Health/screen_shot/Screenshot%20from%202024-06-22%2007-09-45.png)
